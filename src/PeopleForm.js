@@ -13,7 +13,6 @@ const PeopleForm = ({ kisiler, submitFn }) => {
     setIsim("");
   }
 
-
   return (
     <form className="taskForm" onSubmit={handleSubmit}>
       <div className="form-line">
@@ -28,7 +27,9 @@ const PeopleForm = ({ kisiler, submitFn }) => {
           onChange={handleIsimChange}
           value={isim}
         />
-        {kisiler.includes(isim) && <p className="input-error">Bu isim daha önce eklenmiş</p>}
+        {kisiler.includes(isim) && (
+          <p className="input-error">Bu isim daha önce eklenmiş</p>
+        )}
       </div>
 
       <div className="form-line">
